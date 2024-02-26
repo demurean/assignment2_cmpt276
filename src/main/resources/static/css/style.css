@@ -1,0 +1,96 @@
+header, footer {
+    border: 1px solid black;
+}
+
+body
+{
+    background-color: bisque;
+}
+
+.container-fluid 
+{
+    border: 3px dotted maroon;
+    /* margin: 50px; */
+    padding: 30px 30px 30px 30px;
+    width: 50%;
+    position: auto;
+    top: 100px;
+    bottom: 100px;
+    left:50px;
+}
+
+h1
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3
+{
+    font: Arial;
+}
+
+/* Beginning of add.html specifics */
+
+.Introduction
+{
+    background-color: orange;
+}
+
+.entry
+{
+    padding: 5px 8px 0px 0px;
+}
+
+.form-control
+{
+    width: 50%;
+    height: 30px;
+}
+
+.submit
+{
+    padding: 15px 0px 0px 0px;
+}
+
+.submit-b
+{
+    width: 25%; height: 25px;
+}
+
+form {
+    clear: left;
+}
+
+/* End of add.html specific */
+
+/* beginning of template specific */
+.success
+{
+    text-align: center;
+    vertical-align: super;
+}
+
+.studentOutline
+{
+    display: inline-block;
+    border: 1px solid black;
+    position:relative;
+    /* padding: 25px; << makes the box bigger; ended up just x2.5 instead*/
+    /* need to put space between the boxes */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    vertical-align:bottom;
+}
+
+.vert-mid
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* top: 50%; */
+    transform: translateY(50%);
+}
+/* note: if you want to align text in a table cell, put the class in the td, not in the span of text */
+/* span does not receive align attributes, but div does */

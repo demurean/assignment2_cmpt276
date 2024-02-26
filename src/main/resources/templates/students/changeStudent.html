@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modifying student info...</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <div>
+                <h1 class="Introduction"> Change student info form</h1>
+                <form action="/students/change" method="post">
+
+                    <div class="entry">
+                        <h3> Student name: </h3>
+                        <input type="text" id="name" name="name" class="form-control" th:value="${student.name}">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Student's weight: </h3>
+                        <input type="integer" id="weight" name="weight" class="form-control" th:value="${student.weight}">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's height: </h3>
+                        <input type="integer" id="height" name="height" class="form-control" th:value="${student.height}">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's hair colour: </h3>
+                        <input type="text" id="haircolour" name="haircolour" class="form-control" th:value="${student.haircolour}">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's GPA: </h3>
+                        <input type="double" id="gpa" name="gpa" class="form-control" th:value="${student.gpa}">
+                    </div>
+
+                    <input type="hidden" id="sid" name="sid" th:value="${student.sid}">
+
+                    <!-- submit button -->
+                    <div class="submit">
+                        <input type="submit" value="finish" class="submit-b"> </input>
+                    </div>
+                </form>
+                
+                <form action="/students/delete" method="post">
+                    <input type="hidden" name="sid" th:value="${student.sid}">
+                    <button type="submit">Delete student?</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

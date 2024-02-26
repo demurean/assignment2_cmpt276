@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student page</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div>
+            <div>
+                <h1 class="Introduction"> New student form</h1>
+                <form action="students/add" method="post">
+
+                    <div class="entry">
+                        <h3> Enter name of student: </h3>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="student name">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's weight: </h3>
+                        <input type="integer" id="weight" name="weight" class="form-control" placeholder="student weight">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's height: </h3>
+                        <input type="integer" id="height" name="height" class="form-control" placeholder="student height">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's hair colour: </h3>
+                        <input type="text" id="haircolour" name="haircolour" class="form-control" placeholder="student hair colour">
+                    </div>
+
+                    <div class="entry">
+                        <h3> Enter student's GPA: </h3>
+                        <input type="double" id="gpa" name="gpa" class="form-control" placeholder="student gpa">
+                    </div>
+
+                    <!-- submit button -->
+                    <div class="submit">
+                        <input type="submit" value="finish" class="submit-b"> </input>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

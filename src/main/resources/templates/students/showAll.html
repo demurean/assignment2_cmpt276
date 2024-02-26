@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>students</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+    <main>
+        <div class="container-fluid">
+            <h1> STUDENTS: </h1>  
+            <!-- ??? WHERE DID STUD CAME FROM and HOW DID SPRINGWORK KNOWS ITS == sid??? -->
+            <div th:each="student:${stud}" class="studentOutline" th:style="'width:'+${student.weight}*2.5+'px; height:'+${student.height}*2.5+'px'">
+                <div class="vert-mid">
+                    <a th:href="@{'/students/changeStudent?sid=' + ${student.sid}}"> <div th:style="'color:'+${student.haircolour}" th:text="${student.name}"> </div>
+                    <div style="font-weight: bold" th:text="${student.gpa}"> </div> </a>
+                </div>
+            </div>
+
+            <!-- how to make unique modifying webpages for each entry? -->
+            
+            <!-- from tutorial:
+                <li th:each="student:${stud}">
+                <span th:style="'font-size:'+${student.weight}+'pt'" th:text="${student.name}"> </span> <br>
+                <span th:text="${student.haircolour}"> </span>
+                <div th:switch="${student.name}">
+                    <span th:case="'bobby'"> HEY ITS THE INSTRUCTOR </span>
+                    <span th:case="*"> general user </span>
+                </div>
+            </li> -->
+        </div>
+
+    </main>
+</body>
+</html>
